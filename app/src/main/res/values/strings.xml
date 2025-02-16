@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">MyAlarm</string>
     <string name="counter_example">counter: </string>
+    <string name="hour_default">00:00</string>
+    <string name="empty_string"> </string>
+    <string name="add_alarm_text">Add alarm</string>
 </resources>

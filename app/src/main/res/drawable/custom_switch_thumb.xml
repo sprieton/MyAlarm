@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- OFF state -->
+    <item android:id="@+id/state_off" android:state_checked="false">
+        <shape android:shape="oval">
+            <solid android:color="@color/base_clear_grey_blue"/>
+            <stroke android:width="8dp"
+                android:color="@color/base_blue_grey" />
+            <size android:width="40dp" android:height="40dp" />
+        </shape>
+    </item>
+
+    <!-- On state -->
+    <item android:id="@+id/state_on" android:state_checked="true">
+        <shape android:shape="oval">
+            <solid android:color="@color/base_white"/>
+            <stroke android:width="8dp"
+                android:color="@color/base_clay" />
+            <size android:width="40dp" android:height="40dp" />
+        </shape>
+    </item>
+
+</animated-selector>

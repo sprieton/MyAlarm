@@ -4,31 +4,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/blue_white_mountains_bakground"
     android:padding="16dp">
 
-    <!-- TextView para mostrar el contador -->
-    <TextView
-        android:id="@+id/counterText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Counter: 0"
-        android:textColor="#000000"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/counterButton"
-        android:layout_marginBottom="16dp" />
+    <!-- Recycler View to show the current alarms -->
 
-    <!-- FloatingActionButton para incrementar el contador -->
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/counterButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/ic_menu_add"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+    <!-- FloatingActionButton for adding alarms -->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="385dp"
+        android:layout_height="695dp"
+        android:overScrollMode="never"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="32dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addAlarmButton"
+        android:layout_width="86dp"
+        android:layout_height="86dp"
+        android:layout_marginBottom="32dp"
+        app:backgroundTint="#BBDED2"
+        app:fabCustomSize="86dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:maxImageSize="40dp"
+        app:srcCompat="@drawable/icon_plus" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blue_white_mountains_bakground"
+    android:padding="16dp"
+    tools:context=".AlarmSettingsActivity">
+
+    <!-- Titulo de la pantalla -->
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/add_alarm_text"
+        android:textColor="@color/base_white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Selector de hora con NumberPicker -->
+    <LinearLayout
+        android:id="@+id/hourPickerLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleText">
+
+        <NumberPicker
+            android:id="@+id/hourPicker"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:theme="@style/number_picker_theme"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text=":"
+            android:textColor="@color/base_white"
+            android:textSize="24sp" />
+
+        <NumberPicker
+            android:id="@+id/minutePicker"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:theme="@style/number_picker_theme"/>
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/likeAlarmButton"
+        android:layout_width="86dp"
+        android:layout_height="86dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="60dp"
+        app:backgroundTint="@color/base_clay"
+        app:fabCustomSize="86dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:maxImageSize="40dp"
+        app:srcCompat="@drawable/icon_plus" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/disLikeAlarmButton"
+        android:layout_width="86dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="60dp"
+        android:rotation="45"
+        app:backgroundTint="@color/base_clear_grey_blue"
+        app:fabCustomSize="86dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:maxImageSize="40dp"
+        app:srcCompat="@drawable/icon_plus" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
